@@ -1,0 +1,29 @@
+<!-- <label for="fpeliculas">Peliculas</label>
+  <input type="number" id="fpeliculas" name="fname" [(ngModel)]="limit">
+  <button class="button" (click)="enviar()">Enviar</button>
+
+  <hr>
+<div *ngFor="let pelicula of almacenar">
+  <p> <b>Name: </b> {{pelicula.title}} </p>
+  <p> <b>Description: </b> {{pelicula.plot}} </p>
+  <p> <b>Genero:</b> ${{pelicula.genres}}</p>
+  <img class="pelicula-image" [src]="pelicula.poster" alt="">
+  <hr>
+</div> -->
+
+<div class="container-fluid vh-100">
+  <div class="shadow my-5">
+    <label for="fpeliculas">Peliculas</label>
+    <input type="number" id="fpeliculas" name="fname" [(ngModel)]="limit" />
+    <button class="button" (click)="enviar()">Enviar</button>
+  </div>
+  <div class="shadow my-5 d-flex flex-wrap justify-content-evenly text-center">
+    <div class="shadow my-3 w-25 mx-3" *ngFor="let pelicula of almacenar">
+      <p> <b>Name: </b> {{pelicula.title}} </p>
+      <p> <b>Description: </b> {{pelicula.plot}} </p>
+      <p> <b>Genero:</b> {{pelicula.genres}}</p>
+      <img class="pelicula-image" width="75%" [src]="pelicula.poster" alt="">
+      <hr>
+    </div>
+  </div>
+</div>
